@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block title %}Home Page {% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-primary">NHL Sillhouette Guesser</h1>
+    <form method="post" action="{{ url_for('game') }}">
+
+    <button type="submit">Start Game</button>
+
+    </form>
+</div>
+
+
+
+{% endblock %}
