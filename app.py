@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, url_for, request, redirect
+from flask import Flask, redirect, render_template, url_for, request, redirect, jsonify
 from flask_bootstrap import Bootstrap
 from flask import session
 from datetime import timedelta
@@ -14,12 +14,13 @@ def home():
 
 @app.route("/game", methods=["GET", "POST"])
 def game():
-    update_players() # run function to store jsons
-    save_players_to_db(player_by_name)
-    return render_template("game.html")
+    player = get_random_player()
+    return render_template("game.html", player=player)
 
-
-
+@app.route("/get-new-player")
+def get_new_player():
+    player = get_random_player()
+    return jsonify(player)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -2,7 +2,29 @@
 {% block title %}Game {% endblock %}
 {% block content %}
 
-    <h1>Guess the player:</h1>
-    <img src="{{ player['headshot'] }}">
+<div class="container text-center mt-5">
+
+    <h1 class="text-primary">Guess the player:</h1>
+
+    <!-- Display player image -->
+    <div class="my-4">
+        <img class="img-fluid rounded silhouette" src="{{ player['headshot'] }}" id="player-image">
+    </div>
+
+    <!-- Get player input -->
+    <div class="input-group mb-3 w-50 mx-auto">
+        <input type="text" id="player-guess" class="form-control"
+               placeholder="Enter Player Name"
+               data-correctguess="{{ player['firstName']['default'] }} {{ player['lastName']['default'] }}">
+        <button class="btn btn-success" id="submit-btn">Submit</button>
+    </div>
+
+    <p id="result"></p>
+
+     <!-- Get new player button -->
+    <button class="btn btn-primary mt-3" id="next-player-btn">Next Player</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
 
 {% endblock %}

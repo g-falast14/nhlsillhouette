@@ -1,4 +1,5 @@
 # Imports
+import sqlite3
 import requests
 import json
 from functools import reduce
@@ -50,5 +51,16 @@ def update_players():
     return player_by_name # return list of player names matching ids
 
 def get_random_player():
-    player_name = random.choice(list(player_by_name.keys()))
-    return player_by_name[player_name]  # Returns appropriate player json
+    random_team = random.choice(TEAM_ABRS) # grab random team
+    roster = get_json(f"https://api-web.nhle.com/v1/roster/{random_team}/current")
+
+    all_players = []
+    for category in roster:
+        all_players.extend(roster[category]) # flatten json into a single list
+
+    random_player = random.choice(all_players) # grab random player
+
+    return random_player
+
+if __name__ == "__main__":
+    print(type(get_random_player()))
