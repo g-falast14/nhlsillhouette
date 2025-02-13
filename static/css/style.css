@@ -4,15 +4,6 @@ body {
     text-align: center;
 }
 
-.game-container {
-    max-width: 500px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 /*Make player images look nicer*/
 #player-image {
     width: 200px;
@@ -50,7 +41,11 @@ button:hover {
     margin-top: 10px;
 }
 
-.silhouette {
-    filter: grayscale(1);
-    mix-blend-mode: multiply;
+.fwdlinecontainer {
+    display:grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(4, 50px);
+    gap: 10px;
+    background-color: green;
+    padding: 10px;
 }
