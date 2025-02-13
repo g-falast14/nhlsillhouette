@@ -8,7 +8,7 @@
 
     <!-- Display player image -->
     <div class="my-4">
-        <img class="img-fluid rounded silhouette" src="{{ player['headshot'] }}" id="player-image">
+        <img class="img-fluid rounded silhouette" src="{{ player['headshot'] }}" id="player-image" draggable="true">
     </div>
 
     <!-- Get player input -->
@@ -24,17 +24,54 @@
      <!-- Get new player button -->
     <button class="btn btn-primary mt-3" id="next-player-btn">Next Player</button>
 
-    <div class="fwdlinecontainer">
-        <div class="fwdplayerobj">
-
-        </div>
-    </div>
-
-
 </div>
 
-
-
+ <div class="container">
+    <div class="row gap-2 mb-4">
+        <div class="col" id="LW1">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="C1">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="RW1">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+    </div>
+    <div class="row gap-2 mb-4">
+        <div class="col" id="LW2">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="C2">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="RW2">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+    </div>
+    <div class="row gap-2 mb-4">
+        <div class="col" id="LW3">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="C3">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="RW3">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+    </div>
+    <div class="row gap-2 mb-4">
+        <div class="col" id="LW4">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="C4">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+        <div class="col" id="RW4">
+            <div class="fwd-object-container border border-dark rounded p-3"></div>
+        </div>
+    </div>
+</div>
 
 
 

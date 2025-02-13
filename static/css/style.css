@@ -35,17 +35,46 @@ button:hover {
     background-color: #218838;
 }
 
-/* Style result text */
 #result {
     font-size: 18px;
     margin-top: 10px;
 }
 
-.fwdlinecontainer {
+.fwd-object-container {
     display:grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(4, 50px);
-    gap: 10px;
-    background-color: green;
+    grid-template-columns: repeat(3, 20px);
+    grid-template-rows: repeat(4, 10px);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+}
+
+.col {
+    max-width: 300px; /* Set the maximum width */
+    width: 100%;      /* Allow the column to grow up to max-width */
+}
+
+.custom-object {
+    background-color: #ccc; /* Gray background */
+    width: 120px;  /* Set width of the custom object */
     padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack headshot and player name vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-object img {
+    border-radius: 50%;  /* Make the image circular */
+}
+
+.custom-object p {
+    margin-top: 10px;  /* Space between the image and name */
+    font-size: 14px;  /* Adjust font size */
+    color: #333;  /* Dark text color */
+    margin: 0;
 }
